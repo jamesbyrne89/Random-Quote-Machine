@@ -1,0 +1,13 @@
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+#container {
+	width: 50vh;
+	height: 50vh;
+	display: flex;
+ align-items: center;
+  justify-content: center;
+	background-color: lightblue;
+}
