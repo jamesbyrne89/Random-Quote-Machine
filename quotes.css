@@ -174,10 +174,11 @@ margin: 0px;
 		min-height: 0px;
 
 	}
+
  p {
 	margin: 20vh 5vw 0vh 5vw;
 	width: 80vw;
-	font-size: 1.75rem;
+	font-size: 1.75rem !important;
 	}
 
 	#quote-source {
