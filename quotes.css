@@ -6,8 +6,29 @@ body {
 #container {
 	width: 50vh;
 	height: 50vh;
-	display: flex;
- align-items: center;
-  justify-content: center;
+	display: block;
+	padding: 20px;
+ margin: auto;
 	background-color: lightblue;
+}
+
+#banner {
+	width: 400px;
+	text-align: center;
+	display: block;
+	margin: auto;
+	margin-bottom: 50px;
+}
+#generate {
+text-align: center;
+margin: auto;
+	display: block;
+}
+
+#quote-holder {
+	width: 100%;
+	text-align: center;
+	margin-top: 100px;
+	height: 60px;
+	background-color: red;
 }
