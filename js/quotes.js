@@ -9,9 +9,9 @@ $('#generate').on('click', function(e) {
         var currentQuote = (post.content);
         $('#quote-source').html('~   ' + post.title).animate({opacity:1},400);
         $('#quote-holder').html(post.content).animate({opacity:1},400);
-        $('#tweet-button').animate({opacity:1},400);
-        var noTags = currentQuote.replace(/(<([^>]+)>)/gi,"");
-          $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + noTags + "- " + quoteSource));
+        $('#tweet-button').delay(2000).animate({opacity:1},600);
+        var noTags = currentQuote.replace(/(<([^>]+)>)/gi,"'");
+          $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?&related=freecodecamp&text=' + encodeURIComponent(noTags +' - ' + quoteSource));
       },
       cache: false
     });
