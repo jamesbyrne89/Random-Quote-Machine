@@ -113,13 +113,36 @@ p {margin: 0px;
 	height: 60px;
 	font-family: 'open sans', serif;
 	font-size: 2rem;
-	display: block;
 	font-weight: 700;
 	letter-spacing: 0px;
 	text-transform: none;
 	opacity: 0;
+
 }
 
+#tweet-button {
+	height: 60px;
+	width: auto;
+	display: block;
+	background-color: rgb(0, 0, 204);
+	position: absolute;
+	top: 50px;
+	right: 20px;
+		color: #fff;
+		text-align: center;
+		padding: 8px;
+		box-sizing: border-box;
+		opacity: 0;
+}
+
+#tweet-button:hover, .button a:hover {
+	opacity: 0.5;
+}
+
+a:visited {
+	opacity: 0.2;
+	color: rgb(0, 0, 204);
+}
 
 
 
