@@ -9,8 +9,6 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-
-
 	background-color: rgb(0, 0, 204);
 }
 
@@ -98,8 +96,31 @@ margin: auto;
 	margin-bottom: 5px;
 	font-family: 'playfair display', serif;
 	font-size: 8rem;
-	opacity: 0;
+	color: rgb(0, 0, 204);
 }
+  .fade {
+    opacity:0 !important;
+  }
+  /* for the after stage of the quote.*/
+
+  .executed {
+    opacity:1!important;
+    right: 0;
+    -webkit-transition: all 2s ease-in-out;
+      -moz-transition: all 2s ease-in-out;
+      -o-transition: all 2s ease-in-out;
+      transition: all 2s ease-in-out;
+  }
+  /* for the before stage of the quote; should slide right when presented and left when removed.  */
+
+  .reset {
+    opacity:0!important;
+    right:600;
+    -webkit-transition: all 1s ease-in-out;
+      -moz-transition: all 1s ease-in-out;
+      -o-transition: all 1s ease-in-out;
+      transition: all 1s ease-in-out;
+  }
 
 p {margin: 0px;
 	font-family: 'playfair display', serif;
@@ -116,18 +137,18 @@ p {margin: 0px;
 	font-weight: 700;
 	letter-spacing: 0px;
 	text-transform: none;
-	opacity: 0;
-
 }
 
-#tweet-button {
+#tweet-quote {
 	height: 50px;
-	width: auto;
+	width: 70px;
 	display: block;
 	background-color: rgb(0, 0, 204);
 	position: absolute;
 	top: 50px;
 	right: 20px;
+	line-height: 0.5em;
+	font-size: 2em;
 		color: #fff;
 		text-align: center;
 		padding: 8px;
@@ -137,8 +158,27 @@ p {margin: 0px;
 	-webkit-transition: ease all 0.3s;
 }
 
-#tweet-button:hover, .button a:hover, #tweet-button:hover, .button:hover {
+#tweet-quote a:hover, .button a:hover, #tweet-quote:hover, .button:hover, .button .executed:hover {
 	opacity: 0.5;
+}
+
+.slideout {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  z-index: -100;
+  color: #fafafa;
+  font-size: 16px;
+  transition: .3s ease;
+    line-height: 1.5em;
+    opacity: 0;
+}
+
+#tweet-quote:hover .slideout {
+  bottom: -60px;
+  line-height: 1em;
+  color: rgb(0, 0, 204);
+  opacity: 1;
 }
 
 a:visited {
