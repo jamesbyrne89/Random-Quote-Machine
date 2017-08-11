@@ -235,7 +235,7 @@ border: 0px;
 	#quote-holder {
 		width: 80vw;
 		position: relative;
-margin: 0px;
+		margin: 0px;
 		min-height: 0px;
 
 	}
@@ -254,8 +254,6 @@ margin: 0px;
 	}
 }
 
-}
-
 
 @media only screen and (max-width: 321px)
 
@@ -268,7 +266,7 @@ body {
 #banner {
 	width: 100vw;
 	display: block;
-	position: absolute:
+	position: absolute;
 	top: 10px;
 	font-size: 2rem;
 }

@@ -1,0 +1,281 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'open sans', sans-serif;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	box-sizing: border-box;
+	background-color: #fff;
+	color: rgb(0, 0, 204);
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgb(0, 0, 204);
+}
+
+#container {
+	width: 100vw;
+	height: 100vh;
+	display: block;
+	padding: 140px 200px 140px 350px;
+	position: relative;
+ margin: auto;
+	font-family: 'open sans', sans-serif;
+		box-sizing: border-box;
+}
+
+#banner {
+	position: absolute;
+	top: 50px;
+	left: 20px;
+	width: 260px;
+	height: 160px;
+	text-align: left;
+	display: inline-block;
+	margin: 0px 0px 0px 20px;
+	border: none;
+		font-family: 'playfair display', serif;
+}
+
+#page-title{	
+
+	font-size: 4rem;
+	font-weight: 900;
+	line-height: 3.5rem;
+	letter-spacing: -0.225rem;
+	margin-bottom: 0px;
+	height: auto;
+}
+
+#banner-sub {
+		border-top: double rgb(0, 0, 204);
+	display: block;
+	margin-top: 25px;
+	padding-top: 10px;
+		font-size: 1rem;
+	font-family: 'open sans', sans-serif;
+}
+
+.site-links {
+	text-decoration: none;
+	transition: ease all 0.3s;
+	-webkit-transition: ease all 0.3s;
+}
+
+.site-links:hover {
+color: rgb(0, 252, 254);
+text-decoration: none;
+}
+
+#generate, #generate:focus {
+text-align: center;
+margin: auto;
+	display: block;
+	font-size: 2rem;
+	border: double rgb(0, 0, 204);
+	font-family: 'playfair display', serif;
+	font-weight: 800;
+	color: rgb(0, 0, 204);
+	padding: 30px 70px;
+	background-color: transparent;
+
+}
+
+#generate:hover {
+	cursor: pointer;
+	opacity: 0.5;
+	transition: ease all 0.3s;
+	-webkit-transition: ease all 0.3s;
+}
+
+#quote-holder {
+	width: 80%;
+	text-align: left;
+	margin: auto;
+	margin-top: 150px;
+	margin-bottom: 5px;
+	font-family: 'playfair display', serif;
+	font-size: 8rem;
+	color: rgb(0, 0, 204);
+}
+
+.fade {
+    opacity:0 !important;
+  }
+
+/* for the after stage of the quote.*/
+
+.executed {
+    opacity:1!important;
+    right: 0;
+    transition: all 2s ease-in-out;
+  }
+
+/* for the before stage of the quote; should slide right when presented and left when removed.  */
+
+.reset {
+    opacity:0!important;
+    right:600;
+    transition: all 1s ease-in-out;
+  }
+
+p {margin: 0px;
+	font-family: 'playfair display', serif;
+	font-size: 3rem; }
+
+#quote-source {
+	width: 90%;
+	text-align: right;
+	margin: 100px auto;
+	height: 60px;
+	font-family: 'open sans', serif;
+	font-size: 2rem;
+	font-weight: 700;
+	letter-spacing: 0px;
+	text-transform: none;
+}
+
+#tweet-quote {
+	height: 50px;
+	width: 70px;
+	display: block;
+	background-color: rgb(0, 0, 204);
+	position: absolute;
+	top: 50px;
+	right: 20px;
+	line-height: 0.5em;
+	font-size: 2em;
+		color: #fff;
+		text-align: center;
+		padding: 8px;
+		box-sizing: border-box;
+		opacity: 0;
+			transition: ease all 0.3s;
+	-webkit-transition: ease all 0.3s;
+}
+
+#tweet-quote a:hover, .button a:hover, #tweet-quote:hover, .button:hover, .button .executed:hover {
+	opacity: 0.5;
+}
+
+.slideout {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  z-index: -100;
+  color: #fafafa;
+  font-size: 16px;
+  transition: .3s ease;
+    line-height: 1.5em;
+    opacity: 0;
+}
+
+#tweet-quote:hover .slideout {
+  bottom: -60px;
+  line-height: 1em;
+  color: rgb(0, 0, 204);
+  opacity: 1;
+}
+
+a:visited {
+	opacity: 0.2;
+	color: rgb(0, 0, 204);
+}
+
+@media only screen and (max-width: 768px)
+
+{
+body {
+	max-width: 100vw;
+	overflow-x: hidden;
+	margin: 0px;
+	padding: 0px;
+
+}
+
+#banner {
+	width: 80vw;
+	height: auto;
+display: block;
+position: relative;
+top: 2vh;
+margin: 0vh auto 5vh 0px;
+box-sizing: border-box;
+border: 0px;
+
+}
+
+#container {
+	float: left;
+	display: block;
+	width: 100vw;
+	height: auto;
+	clear: both;
+	position: relative;
+	top: 1vh;
+	padding: 2vw ;
+	box-sizing: border-box;
+}
+
+#generate, #generate:hover {
+	width: 80vw;
+	display: block;
+	margin-top: 5vh;
+	position: relative;
+	top: 5vh;
+	box-sizing: border-box;
+}
+
+	#quote-holder {
+		width: 80vw;
+		position: relative;
+		margin: 0px;
+		min-height: 0px;
+
+	}
+
+ p {
+	margin: 20vh 5vw 0vh 5vw;
+	width: 80vw;
+	font-size: 1.75rem !important;
+	}
+
+	#quote-source {
+		margin: 10vh auto 2vh auto;
+		min-height: 0px;
+		font-size: 1.5rem;
+		text-align: left;
+	}
+}
+
+@media only screen and (max-width: 321px)
+
+{
+body {
+	width: 100vw;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+#banner {
+	width: 100vw;
+	display: block;
+	position: absolute;
+	top: 10px;
+	font-size: 2rem;
+}
+
+#container {
+	display: block;
+	width: 100vw;
+}
+
+#generate {
+	width: 80vw;
+}
+
+
+}
