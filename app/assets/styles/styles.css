@@ -1,284 +1,325 @@
+@import 'base/_fonts';
+$blue: rgb(0, 0, 204);
+$lightBlue: rgb(0, 252, 254);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
 	margin: 0px;
 	padding: 0px;
-	font-family: 'open sans', sans-serif;
+	font-family: 'Butler Black', sans-serif;
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	box-sizing: border-box;
-	background-color: #fff;
-	color: rgb(0, 0, 204);
+	color: #fff;
+	background: rgb(0, 0, 204);  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top right, #2948ff, rgb(0, 0, 204));  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top right, #2948ff, rgb(0, 0, 204)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	min-height: 100vh;
 }
 
-::-webkit-scrollbar-thumb {
-	background-color: rgb(0, 0, 204);
-}
+::selection {
+		background: $lightBlue;
+	}
 
-#container {
-	width: 100vw;
-	height: 100vh;
-	display: block;
-	padding: 140px 200px 140px 350px;
-	position: relative;
- margin: auto;
-	font-family: 'open sans', sans-serif;
-		box-sizing: border-box;
-}
-
-#banner {
-	position: absolute;
-	top: 50px;
-	left: 20px;
-	width: 260px;
-	height: 160px;
-	text-align: left;
-	display: inline-block;
-	margin: 0px 0px 0px 20px;
-	border: none;
-		font-family: 'playfair display', serif;
-}
-
-#page-title{	
-
-	font-size: 4rem;
-	font-weight: 900;
-	line-height: 3.5rem;
-	letter-spacing: -0.225rem;
-	margin-bottom: 0px;
+.container {
+	width: 65rem;
 	height: auto;
+	max-height: 98vh;
+	max-width: 90vw;
+	margin-top: 2vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 1em 1em 1em 5em;
 }
 
-#banner-sub {
-		border-top: double rgb(0, 0, 204);
+.site-title {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	text-transform: uppercase;
 	display: block;
-	margin-top: 25px;
-	padding-top: 10px;
-		font-size: 1rem;
-	font-family: 'open sans', sans-serif;
+	top: 2%;
+	left: 2%;
+	color: #fff;
+	padding: 0.25em 0.75em;
+	border: double 4px #fff;
+	text-align: center;
+	z-index: 10;
+	background: transparent;
+	font-size: 1rem;
+	letter-spacing: -0.01em;
+	opacity: 0.8;
+}
+
+.fade-out {
+	animation: fadeOut 0.7s;
+}
+
+.fade-in {
+	animation: fadeIn 57s ease-out backwards 1s;
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+
+}
+
+@keyframes slide-in {
+	0% {
+		transform: translate3d(-100%, 0, 0);
+	}
+
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+
+}
+
+@keyframes slide-up {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+	}
+
+	50% {
+		transform: translate3d(0, 0, 0);
+	}
+
+	100% {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
+
+}
+
+@keyframes slide-down {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 0, 0);
+	}
+
+	50% {
+		transform: translate3d(0, 0, 0);
+	}
+
+	100% {
+		transform: translate3d(0, 3em, 0);
+		opacity: 1;
+	}
+
+}
+
+.quote-body {
+	overflow: hidden;
+
+	p {
+		font-family: 'Butler Regular';
+		animation: slide-up 1.5s ease-out both;
+	}
+
+}
+
+.quote-holder {
+	color: #fff;
+	position: relative;
+}
+
+.quote__mark {
+	font-family: 'Bulter Regular';
+	font-size: 6rem;
+	line-height: 0.75;
+	opacity: 0.7;
+	animation: fadeIn 0.7s ease-out both 0.3s;
+}
+
+.quote-source {
+	font-family: 'Poppins';
+	letter-spacing: 0.1em;
+	padding-top: 4.5rem;
+	margin-top: 1.75em;
+	position: relative;
+	width: auto;
+	display: inline-block;
+	opacity: 0.75;
+	overflow: hidden;
+
+	span {
+		animation: slide-up 1.5s ease-out both;
+	}
+
+}
+
+.quote-source span::before {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 4rem;
+	background: #fff;
+	height: 2px;
+	top: 1.75em;
+	opacity: 0.75;
+	animation: slide-in 0.7s ease-out backwards 0.7s;
+}
+
+.quote-bottom-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.quote-button {
+	margin-top: 5rem;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	letter-spacing: 0.25em;
+	font-family: 'Poppins';
+	font-size: 0.675rem;
+	font-weight: 700;
+	line-height: 45px;
+	max-width: 160px;
+	position: relative;
+	text-transform: uppercase;
+	text-align: center;
+	width: 100%;
+	opacity: 0.5;
+	background: transparent;
+	border: 0;
+}
+
+.quote-button svg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 45px;
+	font-weight: 700;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+.quote-button rect {
+	fill: none;
+	stroke: #fff;
+	stroke-width: 4;
+	stroke-dasharray: 422, 0;
+	-webkit-transition-property: all;
+	transition-property: all;
+	-webkit-transition-duration: .6s;
+	transition-duration: .6s;
+	-webkit-transition-timing-function: ease;
+	transition-timing-function: ease;
+}
+
+.quote-button:hover {
+	font-weight: 900;
+	opacity: 1;
+}
+
+.quote-button:hover rect {
+	stroke: $lightBlue;
+	stroke-width: 4;
+	stroke-dasharray: 23, 291;
+	stroke-dashoffset: 40;
+	-webkit-transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+	transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .site-links {
+	color: #fff;
 	text-decoration: none;
 	transition: ease all 0.3s;
 	-webkit-transition: ease all 0.3s;
 }
 
 .site-links:hover {
-color: rgb(0, 252, 254);
-text-decoration: none;
+	color: $lightBlue;
+	text-decoration: none;
 }
 
-#generate, #generate:focus {
-text-align: center;
-margin: auto;
-	display: block;
-	font-size: 2rem;
-	border: double rgb(0, 0, 204);
-	font-family: 'playfair display', serif;
-	font-weight: 800;
-	color: rgb(0, 0, 204);
-	padding: 30px 70px;
-	background-color: transparent;
-
-}
-
-
-#generate:hover {
-	cursor: pointer;
-	opacity: 0.5;
-	transition: ease all 0.3s;
-	-webkit-transition: ease all 0.3s;
-}
-
-#quote-holder {
-	width: 80%;
-	text-align: left;
-	margin: auto;
-	margin-top: 150px;
-	margin-bottom: 5px;
-	font-family: 'playfair display', serif;
-	font-size: 8rem;
-	color: rgb(0, 0, 204);
-}
-  .fade {
-    opacity:0 !important;
-  }
-  /* for the after stage of the quote.*/
-
-  .executed {
-    opacity:1!important;
-    right: 0;
-    -webkit-transition: all 2s ease-in-out;
-      -moz-transition: all 2s ease-in-out;
-      -o-transition: all 2s ease-in-out;
-      transition: all 2s ease-in-out;
-  }
-  /* for the before stage of the quote; should slide right when presented and left when removed.  */
-
-  .reset {
-    opacity:0!important;
-    right:600;
-    -webkit-transition: all 1s ease-in-out;
-      -moz-transition: all 1s ease-in-out;
-      -o-transition: all 1s ease-in-out;
-      transition: all 1s ease-in-out;
-  }
-
-p {margin: 0px;
-	font-family: 'playfair display', serif;
-	font-size: 3rem; }
-
-
-#quote-source {
-	width: 90%;
-	text-align: right;
-	margin: 100px auto;
-	height: 60px;
-	font-family: 'open sans', serif;
-	font-size: 2rem;
-	font-weight: 700;
-	letter-spacing: 0px;
-	text-transform: none;
-}
-
-#tweet-quote {
-	height: 50px;
-	width: 70px;
-	display: block;
-	background-color: rgb(0, 0, 204);
+.footer {
 	position: absolute;
-	top: 50px;
-	right: 20px;
-	line-height: 0.5em;
-	font-size: 2em;
-		color: #fff;
-		text-align: center;
-		padding: 8px;
-		box-sizing: border-box;
-		opacity: 0;
-			transition: ease all 0.3s;
-	-webkit-transition: ease all 0.3s;
+	bottom: 10px;
+	right: 2%;
+	font-family: 'Poppins';
+	opacity: 0.7;
+	font-size: 0.675rem;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	i {
+		margin: 0 0.5em;
+	}
 }
 
-#tweet-quote a:hover, .button a:hover, #tweet-quote:hover, .button:hover, .button .executed:hover {
-	opacity: 0.5;
+p {
+	margin: 0px;
+	font-family: 'Butler Black', serif;
+	font-size: 3rem;
 }
 
-.slideout {
-  position: absolute;
-  bottom: -50px;
-  left: 0;
-  z-index: -100;
-  color: #fafafa;
-  font-size: 16px;
-  transition: .3s ease;
-    line-height: 1.5em;
-    opacity: 0;
+.button {
+	color: inherit;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0.5em;
+	transition: all 0.15s;
+	border-bottom: solid 2px transparent;
 }
 
-#tweet-quote:hover .slideout {
-  bottom: -60px;
-  line-height: 1em;
-  color: rgb(0, 0, 204);
-  opacity: 1;
+.button:hover {
+	border-bottom: solid 2px #fff;
+}
+
+.button-wrapper {
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+}
+
+.tweet-button {
+	position: relative;
+	top: -3em;
+	animation: slide-down 1s ease-out both 1s;
+}
+
+.fb-button {
+	position: relative;
+	top: -3em;
+	animation: slide-down 1s ease-out both 1.2s;
 }
 
 a:visited {
 	opacity: 0.2;
-	color: rgb(0, 0, 204);
 }
 
-
-
-@media only screen and (max-width: 768px)
-
-{
-body {
-	max-width: 100vw;
-	overflow-x: hidden;
-	margin: 0px;
-	padding: 0px;
-
+@media only screen and (max-width:768px) {
 }
 
-#banner {
-	width: 80vw;
-	height: auto;
-display: block;
-position: relative;
-top: 2vh;
-margin: 0vh auto 5vh 0px;
-box-sizing: border-box;
-border: 0px;
-
-}
-
-#container {
-	float: left;
-	display: block;
-	width: 100vw;
-	height: auto;
-	clear: both;
-	position: relative;
-	top: 1vh;
-	padding: 2vw ;
-	box-sizing: border-box;
-}
-
-#generate, #generate:hover {
-	width: 80vw;
-	display: block;
-	margin-top: 5vh;
-	position: relative;
-	top: 5vh;
-	box-sizing: border-box;
-}
-
-	#quote-holder {
-		width: 80vw;
-		position: relative;
-		margin: 0px;
-		min-height: 0px;
-
-	}
-
- p {
-	margin: 20vh 5vw 0vh 5vw;
-	width: 80vw;
-	font-size: 1.75rem !important;
-	}
-
-	#quote-source {
-		margin: 10vh auto 2vh auto;
-		min-height: 0px;
-		font-size: 1.5rem;
-		text-align: left;
-	}
-}
-
-
-@media only screen and (max-width: 321px)
-
-{
-body {
-	width: 100vw;
-	display: flex;
-	flex-wrap: wrap;
-}
-#banner {
-	width: 100vw;
-	display: block;
-	position: absolute;
-	top: 10px;
-	font-size: 2rem;
-}
-
-#container {
-	display: block;
-	width: 100vw;
-}
-
-#generate {
-	width: 80vw;
-}
-
-
+@media only screen and (max-width:321px) {
 }

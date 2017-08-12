@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Butler Black';
+  src: url('../../fonts/butler_black-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+	   url('../../fonts/butler_black-webfont.woff2') format('woff2'), /* Pretty Modern Browsers */
+       url('../../fonts/butler_black-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Butler Regular';
+  src: url('../../fonts/butler_regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+	   url('../../fonts/butler_regular-webfont.woff2') format('woff2'), /* Pretty Modern Browsers */
+       url('../../fonts/butler_regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
