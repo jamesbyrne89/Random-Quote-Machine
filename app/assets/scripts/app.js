@@ -22,7 +22,7 @@ Get a new quote from the API
                         <i class="fa fa-facebook" aria-hidden="true"></i>
                     </a>`;
 
-              quoteBody.innerHTML = `<div id='quote-mark' class='quote__mark'>​‌“</div>${post.content}`;
+              quoteBody.innerHTML = `<div id='quote-mark' class='quote-mark'>​‌“</div>${post.content}`;
               quoteSource.innerHTML = `<span>${post.title}</span>`;
 
               let quoteText = document.getElementsByTagName('p')[0].innerHTML;

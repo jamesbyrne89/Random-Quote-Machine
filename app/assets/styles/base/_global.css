@@ -1,0 +1,36 @@
+.fade-out {
+	animation: fadeOut 0.7s;
+}
+
+.fade-in {
+	animation: fadeIn 57s ease-out backwards 1s;
+}
+
+
+
+a:link {
+	color: #fff;
+	text-decoration: none;
+	transition: ease all 0.3s;
+	-webkit-transition: ease all 0.3s;
+}
+
+a:hover {
+	color: $lightBlue;
+	text-decoration: none;
+}
+
+
+
+p {
+	margin: 0px;
+	font-family: 'Butler Black', serif;
+	font-size: 3rem;
+}
+
+
+
+a:visited {
+	opacity: 0.2;
+	color: #fff;
+}

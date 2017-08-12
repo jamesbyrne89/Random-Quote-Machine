@@ -36,6 +36,8 @@ body {
 	background: rgb(0, 0, 204);  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to top right, #2948ff, rgb(0, 0, 204)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	min-height: 100vh;
+	height: 100%;
+	overflow: hidden;
 }
 
 ::-moz-selection {
@@ -49,7 +51,7 @@ body {
 .container {
 	width: 65rem;
 	height: auto;
-	max-height: 98vh;
+	max-height: 98%;
 	max-width: 90vw;
 	margin-top: 2vh;
 	display: -webkit-box;
@@ -68,29 +70,6 @@ body {
 	padding: 1em 1em 1em 5em;
 }
 
-.site-title {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	position: absolute;
-	text-transform: uppercase;
-	display: block;
-	top: 2%;
-	left: 2%;
-	color: #fff;
-	padding: 0.25em 0.75em;
-	border: double 4px #fff;
-	text-align: center;
-	z-index: 10;
-	background: transparent;
-	font-size: 1rem;
-	letter-spacing: -0.01em;
-	opacity: 0.8;
-}
-
 .fade-out {
 	-webkit-animation: fadeOut 0.7s;
 	        animation: fadeOut 0.7s;
@@ -99,6 +78,29 @@ body {
 .fade-in {
 	-webkit-animation: fadeIn 57s ease-out backwards 1s;
 	        animation: fadeIn 57s ease-out backwards 1s;
+}
+
+a:link {
+	color: #fff;
+	text-decoration: none;
+	transition: ease all 0.3s;
+	-webkit-transition: ease all 0.3s;
+}
+
+a:hover {
+	color: rgb(0, 252, 254);
+	text-decoration: none;
+}
+
+p {
+	margin: 0px;
+	font-family: 'Butler Black', serif;
+	font-size: 3rem;
+}
+
+a:visited {
+	opacity: 0.2;
+	color: #fff;
 }
 
 @-webkit-keyframes fadeOut {
@@ -251,6 +253,122 @@ body {
 
 }
 
+.site-title {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	position: absolute;
+	text-transform: uppercase;
+	display: block;
+	top: 2%;
+	left: 2%;
+	color: #fff;
+	padding: 0.25em 0.75em;
+	border: double 4px #fff;
+	text-align: center;
+	z-index: 10;
+	background: transparent;
+	font-size: 1rem;
+	letter-spacing: -0.01em;
+	opacity: 0.8;
+}
+
+.quote-button {
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	letter-spacing: 0.25em;
+	font-family: 'Poppins';
+	font-size: 0.675rem;
+	font-weight: 700;
+	line-height: 45px;
+	max-width: 160px;
+	position: relative;
+	text-transform: uppercase;
+	text-align: center;
+	width: 100%;
+	opacity: 0.5;
+	background: transparent;
+	border: 0;
+}
+
+.quote-button svg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 45px;
+	font-weight: 700;
+	box-sizing: inherit;
+}
+
+.quote-button rect {
+	fill: none;
+	stroke: #fff;
+	stroke-width: 4;
+	stroke-dasharray: 422, 0;
+	transition-property: all;
+	transition-duration: .6s;
+	transition-timing-function: ease;
+}
+
+.quote-button:hover {
+	font-weight: 900;
+	opacity: 1;
+}
+
+.quote-button:hover rect {
+	stroke: rgb(0, 252, 254);
+	stroke-width: 4;
+	stroke-dasharray: 23, 291;
+	stroke-dashoffset: 40;
+	transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.button {
+	color: inherit;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0.5em;
+	transition: all 0.15s;
+	border-bottom: solid 2px transparent;
+}
+
+.button:hover {
+	border-bottom: solid 2px #fff;
+	color: #fff;
+}
+
+.button-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	overflow: hidden;
+}
+
+.tweet-button {
+	position: relative;
+	top: -3em;
+	-webkit-animation: slide-down 1s ease-out both 1s;
+	        animation: slide-down 1s ease-out both 1s;
+}
+
+.fb-button {
+	position: relative;
+	top: -3em;
+	-webkit-animation: slide-down 1s ease-out both 1.2s;
+	        animation: slide-down 1s ease-out both 1.2s;
+}
+
 .quote-body {
 	overflow: hidden;
 
@@ -267,8 +385,8 @@ body {
 	position: relative;
 }
 
-.quote__mark {
-	font-family: 'Bulter Regular';
+.quote-mark {
+	font-family: 'Butler Regular';
 	font-size: 6rem;
 	line-height: 0.75;
 	opacity: 0.7;
@@ -323,71 +441,6 @@ body {
 	        align-items: flex-end;
 }
 
-.quote-button {
-	margin-top: 5rem;
-	color: #fff;
-	cursor: pointer;
-	display: block;
-	letter-spacing: 0.25em;
-	font-family: 'Poppins';
-	font-size: 0.675rem;
-	font-weight: 700;
-	line-height: 45px;
-	max-width: 160px;
-	position: relative;
-	text-transform: uppercase;
-	text-align: center;
-	width: 100%;
-	opacity: 0.5;
-	background: transparent;
-	border: 0;
-}
-
-.quote-button svg {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 45px;
-	font-weight: 700;
-	box-sizing: inherit;
-}
-
-.quote-button rect {
-	fill: none;
-	stroke: #fff;
-	stroke-width: 4;
-	stroke-dasharray: 422, 0;
-	transition-property: all;
-	transition-duration: .6s;
-	transition-timing-function: ease;
-}
-
-.quote-button:hover {
-	font-weight: 900;
-	opacity: 1;
-}
-
-.quote-button:hover rect {
-	stroke: rgb(0, 252, 254);
-	stroke-width: 4;
-	stroke-dasharray: 23, 291;
-	stroke-dashoffset: 40;
-	transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-.site-links {
-	color: #fff;
-	text-decoration: none;
-	transition: ease all 0.3s;
-	-webkit-transition: ease all 0.3s;
-}
-
-.site-links:hover {
-	color: rgb(0, 252, 254);
-	text-decoration: none;
-}
-
 .footer {
 	position: absolute;
 	bottom: 10px;
@@ -403,56 +456,67 @@ body {
   margin: 0 0.5em;
 }
 
-p {
-	margin: 0px;
-	font-family: 'Butler Black', serif;
-	font-size: 3rem;
+@media only screen and (max-width:1000px) {
+
+	.quote-mark {
+		font-size: 3rem;
+	}
+
+	.quote-body p {
+		font-size: 2rem;
+	}
+
+	.quote-source {
+		font-size: 1rem;
+	}
 }
 
-.button {
-	color: inherit;
-	cursor: pointer;
-	display: inline-block;
-	margin: 0.5em;
-	transition: all 0.15s;
-	border-bottom: solid 2px transparent;
+@media only screen and (max-width:600px) {
+
+	.container {
+		padding-left: 0;
+		margin-top: 0;
+		margin-top: 2.5rem;
+	}
+
+	.site-title {
+		font-size: 0.675rem;
+		left: 5%;
+	}
+
+	.quote-body p {
+		font-size: 1.25rem;
+	}
+
+	.quote-source {
+		margin-top: 0.5rem;
+		padding-top: 3.5em;
+		font-size: 0.75rem;
+	}
+
+	.quote-source span::before {
+    width: 2rem;
+  }
+
+	.quote-button {
+		margin-top: 3rem;
+		max-width: 120px;
+		padding: 0em;
+	}
+
+	.quote-button svg {
+    height: 40px;
+  }
+
+	.footer {
+		width: 100%;
+		margin: auto;
+		padding: 0 1em;
+		text-align: center;
+		font-size: 0.5rem;
+	}
+
 }
 
-.button:hover {
-	border-bottom: solid 2px #fff;
-}
 
-.button-wrapper {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	    -ms-flex-direction: row;
-	        flex-direction: row;
-	overflow: hidden;
-}
 
-.tweet-button {
-	position: relative;
-	top: -3em;
-	-webkit-animation: slide-down 1s ease-out both 1s;
-	        animation: slide-down 1s ease-out both 1s;
-}
-
-.fb-button {
-	position: relative;
-	top: -3em;
-	-webkit-animation: slide-down 1s ease-out both 1.2s;
-	        animation: slide-down 1s ease-out both 1.2s;
-}
-
-a:visited {
-	opacity: 0.2;
-}
-
-@media only screen and (max-width:768px) {
-}
-
-@media only screen and (max-width:321px) {
-}

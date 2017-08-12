@@ -1,0 +1,58 @@
+.quote-body {
+	overflow: hidden;
+
+	p {
+		font-family: 'Butler Regular';
+		animation: slide-up 1.5s ease-out both;
+	}
+
+}
+
+.quote-holder {
+	color: #fff;
+	position: relative;
+}
+
+.quote-mark {
+	font-family: 'Butler Regular';
+	font-size: 6rem;
+	line-height: 0.75;
+	opacity: 0.7;
+	animation: fadeIn 0.7s ease-out both 0.3s;
+}
+
+.quote-source {
+	font-family: 'Poppins';
+	letter-spacing: 0.1em;
+	padding-top: 4.5rem;
+	margin-top: 1.75em;
+	position: relative;
+	width: auto;
+	display: inline-block;
+	opacity: 0.75;
+	overflow: hidden;
+
+	span {
+		animation: slide-up 1.5s ease-out both;
+	}
+
+}
+
+.quote-source span::before {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 4rem;
+	background: #fff;
+	height: 2px;
+	top: 1.75em;
+	opacity: 0.75;
+	animation: slide-in 0.7s ease-out backwards 0.7s;
+}
+
+.quote-bottom-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-end;
+}

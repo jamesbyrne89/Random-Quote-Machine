@@ -1,0 +1,60 @@
+
+@media only screen and (max-width:1000px) {
+
+	.quote-mark {
+		font-size: 3rem;
+	}
+
+	.quote-body p {
+		font-size: 2rem;
+	}
+
+	.quote-source {
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (max-width:600px) {
+
+	.container {
+		padding-left: 0;
+		margin-top: 0;
+		margin-top: 2.5rem;
+	}
+
+	.site-title {
+		font-size: 0.675rem;
+		left: 5%;
+	}
+
+	.quote-body p {
+		font-size: 1.25rem;
+	}
+
+	.quote-source {
+		margin-top: 0.5rem;
+		padding-top: 3.5em;
+		font-size: 0.75rem;
+		& span::before {
+			width: 2rem;
+		}
+	}
+
+	.quote-button {
+		margin-top: 3rem;
+		max-width: 120px;
+		padding: 0em;
+		& svg {
+			height: 40px;
+		}
+	}
+
+	.footer {
+		width: 100%;
+		margin: auto;
+		padding: 0 1em;
+		text-align: center;
+		font-size: 0.5rem;
+	}
+
+}

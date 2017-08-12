@@ -18,7 +18,7 @@ function getAQuote() {
 
             btnWrapper.innerHTML = '<a class="button tweet-button" id="tweet-quote" title="Tweet this quote!" target="_blank" href="https://twitter.com/intent/tweet?text=' + quoteText + ' ~ ' + post.title + '"\n  data-size="large">\n                        <i class="fa fa-twitter" aria-hidden="true"></i>\n                    </a>\n                    <a class=\'button fb-button\' target=\'_blank\' OnClick="window.open(this.href,\'targetWindow\',\'toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250\'); return false;" href=\'http://www.facebook.com/sharer/sharer.php?u=https://jamesbyrne89.github.io/Random-Quote-Machine&title=Design Wisdom\'>\n                        <i class="fa fa-facebook" aria-hidden="true"></i>\n                    </a>';
 
-            quoteBody.innerHTML = '<div id=\'quote-mark\' class=\'quote__mark\'>\u200B\u200C\u201C</div>' + post.content;
+            quoteBody.innerHTML = '<div id=\'quote-mark\' class=\'quote-mark\'>\u200B\u200C\u201C</div>' + post.content;
             quoteSource.innerHTML = '<span>' + post.title + '</span>';
 
             var quoteText = document.getElementsByTagName('p')[0].innerHTML;
